@@ -47,12 +47,12 @@ public class LoginServlet extends HttpServlet {
 		ResultSet rs = ps.executeQuery();
 	
 		while (rs.next()) {
-			System.out.println("----For Home.jsp--");
+			//System.out.println("----For Home.jsp--");
 			response.sendRedirect("Home.jsp");
 			return;
 		}
 		
-		System.out.println("----For Error.jsp----");
+		//System.out.println("----For Error.jsp----");
 		response.sendRedirect("Error.jsp");
 		return;
 		} catch (SQLException e) {

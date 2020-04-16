@@ -25,7 +25,7 @@ public class DBUtil {
 			 }
 			 
 			 con = DriverManager.getConnection(url, username, password); //attempting to connect to MySQL database
-			 System.out.println("Printing connection object "+con);
+			// System.out.println("Printing connection object "+con);
 		 } 
 		 catch (Exception e) 
 		 {
