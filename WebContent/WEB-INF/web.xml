@@ -18,9 +18,9 @@
 	</servlet>
 	 <servlet>
 		<description></description>
-		<display-name>ResultServlet</display-name>
-		<servlet-name>ResultServlet</servlet-name>
-		<servlet-class>com.gw.serachPortal.Controller.ResultServlet</servlet-class>
+		<display-name>GWSearchAPIServlet</display-name>
+		<servlet-name>GWSearchAPIServlet</servlet-name>
+		<servlet-class>com.gw.serachPortal.Controller.GWSearchAPIServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>
@@ -31,7 +31,7 @@
 		<url-pattern>/RegisterServlet</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>ResultServlet</servlet-name>
-		<url-pattern>/ResultServlet</url-pattern>
+		<servlet-name>GWSearchAPIServlet</servlet-name>
+		<url-pattern>/GWSearchAPIServlet</url-pattern>
 	</servlet-mapping>
 </web-app>

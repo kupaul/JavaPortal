@@ -19,11 +19,11 @@ import com.example.search.policysearchportalapi.PolicySearchPortalAPIPortType;
 import com.example.search.policysearchportalapi.WsiAuthenticationException_Exception;
 import com.guidewire.webservice.ExternalAPI;
 
-public class ResultServlet  extends HttpServlet {
+public class GWSearchAPIServlet  extends HttpServlet {
 	
 	public static final long serialVersionUID = 1L;
 	
-	public ResultServlet() {
+	public GWSearchAPIServlet() {
 		super();
 	}
 	
@@ -37,8 +37,7 @@ public class ResultServlet  extends HttpServlet {
 		try {
 			 String accNo = request.getParameter("acc");
 			
-		
-				PolicySearchPortalAPI api = new PolicySearchPortalAPI();
+			 	PolicySearchPortalAPI api = new PolicySearchPortalAPI();
 				PolicySearchPortalAPIPortType port = api.getPolicySearchPortalAPISoap11Port();
 				
 				BindingProvider bp = (BindingProvider)port;

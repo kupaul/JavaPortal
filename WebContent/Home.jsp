@@ -26,6 +26,7 @@ function searchCheck() {
 </script>
 </head>
 <body>
+<form action="GWSearchAPIServlet" method="post">
 <table >
 	<tr>
 	<td><br>Welcome   ${userName}</td>
@@ -74,6 +75,6 @@ function searchCheck() {
                     <td><input type="submit" value="Submit" /></td>
                 </tr>
 </table>
-
+</form>
 </body>
 </html>
