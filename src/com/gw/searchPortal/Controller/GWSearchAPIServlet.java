@@ -1,4 +1,4 @@
-package com.gw.serachPortal.Controller;
+package com.gw.searchPortal.Controller;
 
 import java.io.IOException;
 import java.util.Map;
@@ -17,7 +17,7 @@ import com.example.search.AccountInfo;
 import com.example.search.policysearchportalapi.PolicySearchPortalAPI;
 import com.example.search.policysearchportalapi.PolicySearchPortalAPIPortType;
 import com.example.search.policysearchportalapi.WsiAuthenticationException_Exception;
-import com.guidewire.webservice.ExternalAPI;
+
 
 public class GWSearchAPIServlet  extends HttpServlet {
 	
@@ -27,7 +27,7 @@ public class GWSearchAPIServlet  extends HttpServlet {
 		super();
 	}
 	
-	Logger logger = Logger.getLogger(ExternalAPI.class.getName());
+	Logger logger = Logger.getLogger(GWSearchAPIServlet.class.getName());
 
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response)

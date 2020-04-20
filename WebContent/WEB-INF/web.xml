@@ -8,19 +8,19 @@
 		<description></description>
 		<display-name>LoginServlet</display-name>
 		<servlet-name>LoginServlet</servlet-name>
-		<servlet-class>com.gw.serachPortal.Controller.LoginServlet</servlet-class>
+		<servlet-class>com.gw.searchPortal.Controller.LoginServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<description></description>
 		<display-name>RegisterServlet</display-name>
 		<servlet-name>RegisterServlet</servlet-name>
-		<servlet-class>com.gw.serachPortal.Controller.RegisterServlet</servlet-class>
+		<servlet-class>com.gw.searchPortal.Controller.RegisterServlet</servlet-class>
 	</servlet>
 	 <servlet>
 		<description></description>
 		<display-name>GWSearchAPIServlet</display-name>
 		<servlet-name>GWSearchAPIServlet</servlet-name>
-		<servlet-class>com.gw.serachPortal.Controller.GWSearchAPIServlet</servlet-class>
+		<servlet-class>com.gw.searchPortal.Controller.GWSearchAPIServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>

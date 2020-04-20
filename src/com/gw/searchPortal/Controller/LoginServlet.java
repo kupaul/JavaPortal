@@ -1,4 +1,4 @@
-package com.gw.serachPortal.Controller;
+package com.gw.searchPortal.Controller;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.guidewire.webservice.ExternalAPI;
+
 import com.gw.searchPortal.Util.DBUtil;
 
 
@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	Logger logger = Logger.getLogger(ExternalAPI.class.getName());
+	Logger logger = Logger.getLogger(LoginServlet.class.getName());
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String un=request.getParameter("username");
