@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import com.gw.searchPortal.Bean.UserLoginBean;
 import com.gw.searchPortal.Util.DBUtil;
-import com.gw.serachPortal.Bean.UserLoginBean;
 
 public class UserDao {
 	

@@ -1,4 +1,4 @@
-package com.gw.serachPortal.Controller;
+package com.gw.searchPortal.Controller;
 
 import java.io.IOException;
 
@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.gw.searchPortal.Bean.UserLoginBean;
 import com.gw.searchPortal.Dao.UserDao;
-import com.gw.serachPortal.Bean.UserLoginBean;
 
 public class RegisterServlet extends HttpServlet{
 

@@ -1,4 +1,4 @@
-package com.gw.serachPortal.Bean;
+package com.gw.searchPortal.Bean;
 
 public class UserLoginBean {
 	
