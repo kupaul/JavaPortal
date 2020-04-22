@@ -1,6 +1,7 @@
 package com.gw.searchPortal.Controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -10,9 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.ws.BindingProvider;
-
-import org.apache.log4j.BasicConfigurator;
-
 import com.example.search.AccountInfo;
 import com.example.search.policysearchportalapi.PolicySearchPortalAPI;
 import com.example.search.policysearchportalapi.PolicySearchPortalAPIPortType;
@@ -58,6 +56,23 @@ public class GWSearchAPIServlet  extends HttpServlet {
 				String accPh = accInfo.getPhoneNumber();
 				String accEmail = accInfo.getEmail();
 				String accAdd = accInfo.getAddress();
+			
+				ArrayList<String> policylist=new ArrayList<String>();   
+				/*policylist.add("6818018606");    
+				policylist.add("8818014567");    
+				policylist.add("6634018606");   */ 
+			
+				
+				ArrayList<String> contactList=new ArrayList<String>();   
+				/*contactList.add("Kuntal Paul");    
+				contactList.add("Debrupa Dutta");    */
+			   
+				logger.info("Account holder's name : " + accInfo.getAccountName());
+				logger.info("Account holder's Policies : " + accInfo.getPolicies());
+				logger.info("Account holder's Policies::: " + policylist);
+				logger.info("Account holder's contactList : " + contactList);
+				
+				
 				
 				
 				 request.setAttribute("ContactData", accInfo);
@@ -68,6 +83,8 @@ public class GWSearchAPIServlet  extends HttpServlet {
 				 request.setAttribute("Phone", accPh);
 				 request.setAttribute("Email", accEmail);
 				 request.setAttribute("Address", accAdd);
+				 request.setAttribute("Policies", policylist);
+				 request.setAttribute("Conatact_Name", contactList);
 				 
 				 String resultJSP = "/Result.jsp";
 				  RequestDispatcher dispatcher = 
