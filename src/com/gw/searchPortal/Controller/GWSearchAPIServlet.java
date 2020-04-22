@@ -63,8 +63,8 @@ public class GWSearchAPIServlet  extends HttpServlet {
 	
 				
 				logger.info("Account holder's name : " + accInfo.getAccountName());
-				logger.info("Account holder's Policies : " + accInfo.getPolicies().getEntry());
-				logger.info("Account holder's contactList : " + accInfo.getAccountContact().getEntry());
+				logger.info("Account holder's Policies : " + accInfo.getPolicies().getEntry().toString());
+				logger.info("Account holder's contactList : " + accInfo.getAccountContact().getEntry().toString());
 				
 				
 				
@@ -84,9 +84,6 @@ public class GWSearchAPIServlet  extends HttpServlet {
 				  RequestDispatcher dispatcher = 
 				   getServletContext().getRequestDispatcher(resultJSP);
 				  dispatcher.forward(request, response);
-				
-				
-				//response.sendRedirect("Result.jsp");
 			   
 		} catch (WsiAuthenticationException_Exception e) {
 			e.printStackTrace();
