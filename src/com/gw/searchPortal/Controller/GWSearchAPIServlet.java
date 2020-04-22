@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.ws.BindingProvider;
 import com.example.search.AccountInfo;
+import com.example.search.AccountInfo.AccountContact;
+import com.example.search.AccountInfo.Policies;
 import com.example.search.policysearchportalapi.PolicySearchPortalAPI;
 import com.example.search.policysearchportalapi.PolicySearchPortalAPIPortType;
 import com.example.search.policysearchportalapi.WsiAuthenticationException_Exception;
@@ -55,22 +57,14 @@ public class GWSearchAPIServlet  extends HttpServlet {
 				String accStat = accInfo.getStatus();
 				String accPh = accInfo.getPhoneNumber();
 				String accEmail = accInfo.getEmail();
+				ArrayList<String> policylist=(ArrayList<String>) accInfo.getPolicies().getEntry();
+				ArrayList<String> contactList=(ArrayList<String>) accInfo.getAccountContact().getEntry();
 				String accAdd = accInfo.getAddress();
-			
-				ArrayList<String> policylist=new ArrayList<String>();   
-				/*policylist.add("6818018606");    
-				policylist.add("8818014567");    
-				policylist.add("6634018606");   */ 
-			
+	
 				
-				ArrayList<String> contactList=new ArrayList<String>();   
-				/*contactList.add("Kuntal Paul");    
-				contactList.add("Debrupa Dutta");    */
-			   
 				logger.info("Account holder's name : " + accInfo.getAccountName());
-				logger.info("Account holder's Policies : " + accInfo.getPolicies());
-				logger.info("Account holder's Policies::: " + policylist);
-				logger.info("Account holder's contactList : " + contactList);
+				logger.info("Account holder's Policies : " + accInfo.getPolicies().getEntry());
+				logger.info("Account holder's contactList : " + accInfo.getAccountContact().getEntry());
 				
 				
 				
