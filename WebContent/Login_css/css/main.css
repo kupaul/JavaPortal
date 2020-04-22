@@ -232,9 +232,10 @@ iframe {
 
   display: block;
   width: 100%;
-  height: 62px;
-  background: transparent;
-  padding: 0 20px 0 23px;
+      height: 55px;
+    background: rgba(255, 255, 255, 0.43);
+    padding: 0 20px 0 23px;
+    margin-bottom: 14px;
 }
 
 
