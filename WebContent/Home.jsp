@@ -31,7 +31,7 @@ function searchCheck() {
 
 
 <form action="GWSearchAPIServlet" method="post">
-<div  style="background-image: url('Login_css/images/1.jpg');">
+<div  style="background-image: url('Login_css/images/4.jpg');">
 <table width="100%">
 <tr class="topnav">
 	<td><b>Welcome   ${userName}</td>
