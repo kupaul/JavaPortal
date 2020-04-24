@@ -1,14 +1,10 @@
-<%@page import="java.util.Iterator"%>
-<%@page import="java.util.ArrayList"%>
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Result Page</title>
+<title>Policy Result Page</title>
 <link rel="stylesheet" type="text/css" href="Home_css/home.css">
 </head>
 <body>
@@ -23,9 +19,9 @@
 <tr></tr>
 </table>
 <table style="with: 80%">
-<table align="center" cellpadding = "30" >
+<table align="center" cellpadding = "10" >
     
-    <tr> <td style="color:yellow" style=><h3><u>Account Information</u></h3></td> </tr>
+    <tr> <td style="color:#FF7A00" style=><h3><u>Account Information</u></h3></td> </tr>
     
     <tr>
      <td width="25%" style="color:white"><b>Account No:</b>  </td>
@@ -51,25 +47,37 @@
      <td width="25%" style="color:white"><b>Account Address:</b></td>
      <td width="25%" style="color:white">${Address}</td>
     </tr>
-    
-    <tr> <td width="25%" style="color:white"><h3><u>Policies</u></h3></td> </tr>
-        <tr>
-             <%ArrayList<String> pol =  
-            (ArrayList<String>)request.getAttribute("Policies"); 
-             for(String s:pol){%> 
-              <td width="25%" style="color:white"><%=s%></td> 
-			<%}%>
+    <tr> <td style="color:#FF7A00" style=><h3><u>Official IDs</u></h3></td> </tr>
+     <tr>
+     <tr>
+     <td width="25%" style="color:white"><b>SSN:</b></td>
+     <td width="25%" style="color:white">${ssn}</td>
     </tr>
-
-   <tr> <td width="25%" style="color:white"><h3><u>Contact Names</u></h3></td> </tr>
-       <tr>
-             <%ArrayList<String> conName =  
-            (ArrayList<String>)request.getAttribute("Conatact_Name"); 
-             for(String names:conName){%> 
-             <td width="25%" style="color:white"><%=names%></td> 
-
-
-            <%}%>
+    <tr> <td style="color:#FF7A00" style=><h3><u>Policy</u></h3></td> </tr>
+     <tr>
+     <td width="25%" style="color:white"><b>Product:</b></td>
+     <td width="25%" style="color:white">${product}</td>
+    </tr>
+    <tr>
+     <td width="25%" style="color:white"><b>Number:</b></td>
+     <td width="25%" style="color:white">${pnumber}</td>
+    </tr>
+    <tr>
+     <td width="25%" style="color:white"><b>Issued:</b></td>
+     <td width="25%" style="color:white">${issued}</td>
+    </tr>
+    <tr>
+     <td width="25%" style="color:white"><b>First Issued Date:</b></td>
+     <td width="25%" style="color:white">${first_issued_date}</td>
+    </tr>
+    <tr>
+     <td width="25%" style="color:white"><b>Underwriter:</b></td>
+     <td width="25%" style="color:white">${underwriter}</td>
+    </tr>
+    <tr> <td style="color:#FF7A00" style=><h3><u>Primary Named Insured</u></h3></td> </tr>
+     <tr>
+     <td width="25%" style="color:white"><b>Name:</b></td>
+     <td width="25%" style="color:white">${pni_name}</td>
     </tr>
         <tr>
                     <td><button class="favorite styled" formaction="Home.jsp"> GO BACK </button></td>
