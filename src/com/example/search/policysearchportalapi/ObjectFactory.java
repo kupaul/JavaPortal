@@ -30,11 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetAccountInfo }
+     * Create an instance of {@link GetPolicyInfoResponse }
      * 
      */
-    public GetAccountInfo createGetAccountInfo() {
-        return new GetAccountInfo();
+    public GetPolicyInfoResponse createGetPolicyInfoResponse() {
+        return new GetPolicyInfoResponse();
     }
 
     /**
@@ -46,11 +46,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetPolicyInfo }
+     * 
+     */
+    public GetPolicyInfo createGetPolicyInfo() {
+        return new GetPolicyInfo();
+    }
+
+    /**
      * Create an instance of {@link WsiAuthenticationException }
      * 
      */
     public WsiAuthenticationException createWsiAuthenticationException() {
         return new WsiAuthenticationException();
+    }
+
+    /**
+     * Create an instance of {@link GetAccountInfo }
+     * 
+     */
+    public GetAccountInfo createGetAccountInfo() {
+        return new GetAccountInfo();
     }
 
 }

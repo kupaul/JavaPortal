@@ -3,8 +3,10 @@ package com.example.search.policysearchportalapi;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import com.example.search.PolicyInfo;
 
 
 /**
@@ -17,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="accountNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://example.com/search}PolicyInfo" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,35 +30,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "accountNumber"
+    "_return"
 })
-@XmlRootElement(name = "getAccountInfo")
-public class GetAccountInfo {
+@XmlRootElement(name = "getPolicyInfoResponse")
+public class GetPolicyInfoResponse {
 
-    protected String accountNumber;
+    @XmlElement(name = "return")
+    protected PolicyInfo _return;
 
     /**
-     * Gets the value of the accountNumber property.
+     * Gets the value of the return property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link PolicyInfo }
      *     
      */
-    public String getAccountNumber() {
-        return accountNumber;
+    public PolicyInfo getReturn() {
+        return _return;
     }
 
     /**
-     * Sets the value of the accountNumber property.
+     * Sets the value of the return property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link PolicyInfo }
      *     
      */
-    public void setAccountNumber(String value) {
-        this.accountNumber = value;
+    public void setReturn(PolicyInfo value) {
+        this._return = value;
     }
 
 }
