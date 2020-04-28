@@ -38,6 +38,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link PolicyInfo }
+     * 
+     */
+    public PolicyInfo createPolicyInfo() {
+        return new PolicyInfo();
+    }
+
+    /**
      * Create an instance of {@link AccountInfo.AccountContact }
      * 
      */

@@ -81,7 +81,7 @@ function searchCheck() {
 				
 				 <tr>
                     <td><button class="favorite styled" type="submit" value="submit">submit
-</button>
+</button></td>
                 </tr>
                 </table>
 </div></form>

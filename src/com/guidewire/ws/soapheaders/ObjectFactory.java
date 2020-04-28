@@ -24,9 +24,9 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Authentication_QNAME = new QName("http://guidewire.com/ws/soapheaders", "authentication");
-    private final static QName _Locale_QNAME = new QName("http://guidewire.com/ws/soapheaders", "locale");
     private final static QName _TransactionId_QNAME = new QName("http://guidewire.com/ws/soapheaders", "transaction_id");
+    private final static QName _Locale_QNAME = new QName("http://guidewire.com/ws/soapheaders", "locale");
+    private final static QName _Authentication_QNAME = new QName("http://guidewire.com/ws/soapheaders", "authentication");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.guidewire.ws.soapheaders
@@ -60,25 +60,17 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Authentication }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TransactionId }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Authentication }{@code >}
      */
-    @XmlElementDecl(namespace = "http://guidewire.com/ws/soapheaders", name = "authentication")
-    public JAXBElement<Authentication> createAuthentication(Authentication value) {
-        return new JAXBElement<Authentication>(_Authentication_QNAME, Authentication.class, null, value);
+    @XmlElementDecl(namespace = "http://guidewire.com/ws/soapheaders", name = "transaction_id")
+    public JAXBElement<TransactionId> createTransactionId(TransactionId value) {
+        return new JAXBElement<TransactionId>(_TransactionId_QNAME, TransactionId.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Locale }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Locale }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Locale }{@code >}
      */
     @XmlElementDecl(namespace = "http://guidewire.com/ws/soapheaders", name = "locale")
     public JAXBElement<Locale> createLocale(Locale value) {
@@ -86,16 +78,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TransactionId }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Authentication }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link TransactionId }{@code >}
      */
-    @XmlElementDecl(namespace = "http://guidewire.com/ws/soapheaders", name = "transaction_id")
-    public JAXBElement<TransactionId> createTransactionId(TransactionId value) {
-        return new JAXBElement<TransactionId>(_TransactionId_QNAME, TransactionId.class, null, value);
+    @XmlElementDecl(namespace = "http://guidewire.com/ws/soapheaders", name = "authentication")
+    public JAXBElement<Authentication> createAuthentication(Authentication value) {
+        return new JAXBElement<Authentication>(_Authentication_QNAME, Authentication.class, null, value);
     }
 
 }

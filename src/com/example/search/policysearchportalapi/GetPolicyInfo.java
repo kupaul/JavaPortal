@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="accountNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="policyNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,35 +28,35 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "accountNumber"
+    "policyNumber"
 })
-@XmlRootElement(name = "getAccountInfo")
-public class GetAccountInfo {
+@XmlRootElement(name = "getPolicyInfo")
+public class GetPolicyInfo {
 
-    protected String accountNumber;
+    protected String policyNumber;
 
     /**
-     * Gets the value of the accountNumber property.
+     * Gets the value of the policyNumber property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getAccountNumber() {
-        return accountNumber;
+    public String getPolicyNumber() {
+        return policyNumber;
     }
 
     /**
-     * Sets the value of the accountNumber property.
+     * Sets the value of the policyNumber property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setAccountNumber(String value) {
-        this.accountNumber = value;
+    public void setPolicyNumber(String value) {
+        this.policyNumber = value;
     }
 
 }
