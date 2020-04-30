@@ -22,6 +22,18 @@
 		<servlet-name>GWSearchAPIServlet</servlet-name>
 		<servlet-class>com.gw.searchPortal.Controller.GWSearchAPIServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description></description>
+		<display-name>AccountSearchServlet</display-name>
+		<servlet-name>AccountSearchServlet</servlet-name>
+		<servlet-class>com.gw.searchPortal.Controller.AccountSearchServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description></description>
+		<display-name>PolicySearchServlet</display-name>
+		<servlet-name>PolicySearchServlet</servlet-name>
+		<servlet-class>com.gw.searchPortal.Controller.PolicySearchServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>
 		<url-pattern>/LoginServlet</url-pattern>
@@ -34,4 +46,13 @@
 		<servlet-name>GWSearchAPIServlet</servlet-name>
 		<url-pattern>/GWSearchAPIServlet</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AccountSearchServlet</servlet-name>
+		<url-pattern>/AccountSearchServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PolicySearchServlet</servlet-name>
+		<url-pattern>/PolicySearchServlet</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

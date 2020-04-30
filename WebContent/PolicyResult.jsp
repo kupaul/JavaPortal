@@ -25,27 +25,20 @@
     
     <tr>
      <td width="25%" style="color:white"><b>Account No:</b>  </td>
-    <td width="25%" style="color:white">${Number}</td>
+    <td width="25%" style="color:white">${AccNumber}</td>
     </tr>
     <tr>
      <td width="25%" style="color:white"><b>Account Name:</b></td>
-     <td width="25%" style="color:white">${Name}</td>
+     <td width="25%" style="color:white">${AccName}</td>
     </tr>
-    <tr>
-     <td width="25%" style="color:white"><b>Status:</b></td>
-     <td width="25%" style="color:white">${Status}</td>
-    </tr>
-    <tr>
-     <td width="25%" style="color:white"><b>Account Phone No:</b></td>
-     <td width="25%" style="color:white">${Phone}</td>
-    </tr>
-    <tr>
-     <td width="25%" style="color:white"><b>Account Email:</b></td>
-     <td width="25%" style="color:white">${Email}</td>
-    </tr>
+   
     <tr>
      <td width="25%" style="color:white"><b>Account Address:</b></td>
-     <td width="25%" style="color:white">${Address}</td>
+     <td width="25%" style="color:white">${AccAddress}</td>
+    </tr>
+     <tr>
+     <td width="25%" style="color:white"><b>Address Type:</b></td>
+     <td width="25%" style="color:white">${AddressType}</td>
     </tr>
     <tr> <td style="color:#FF7A00" style=><h3><u>Official IDs</u></h3></td> </tr>
      <tr>
@@ -74,7 +67,7 @@
      <td width="25%" style="color:white"><b>Underwriter:</b></td>
      <td width="25%" style="color:white">${underwriter}</td>
     </tr>
-    <tr> <td style="color:#FF7A00" style=><h3><u>Primary Named Insured</u></h3></td> </tr>
+    <tr> <td style="color:#FF7A00" style=><h3><u>Primary Named Insuwhite</u></h3></td> </tr>
      <tr>
      <td width="25%" style="color:white"><b>Name:</b></td>
      <td width="25%" style="color:white">${pni_name}</td>
