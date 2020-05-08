@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="Entry" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *                   &lt;element name="Entry" type="{http://example.com/search}AccountContactInfo" maxOccurs="unbounded" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
@@ -316,7 +316,7 @@ public class AccountInfo {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="Entry" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+     *         &lt;element name="Entry" type="{http://example.com/search}AccountContactInfo" maxOccurs="unbounded" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -332,7 +332,7 @@ public class AccountInfo {
     public static class AccountContact {
 
         @XmlElement(name = "Entry", nillable = true)
-        protected List<String> entry;
+        protected List<AccountContactInfo> entry;
 
         /**
          * Gets the value of the entry property.
@@ -352,13 +352,13 @@ public class AccountInfo {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link String }
+         * {@link AccountContactInfo }
          * 
          * 
          */
-        public List<String> getEntry() {
+        public List<AccountContactInfo> getEntry() {
             if (entry == null) {
-                entry = new ArrayList<String>();
+                entry = new ArrayList<AccountContactInfo>();
             }
             return this.entry;
         }

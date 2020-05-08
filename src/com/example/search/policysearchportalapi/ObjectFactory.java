@@ -30,6 +30,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetContactInfoResponse }
+     * 
+     */
+    public GetContactInfoResponse createGetContactInfoResponse() {
+        return new GetContactInfoResponse();
+    }
+
+    /**
      * Create an instance of {@link GetPolicyInfoResponse }
      * 
      */
@@ -59,6 +67,14 @@ public class ObjectFactory {
      */
     public WsiAuthenticationException createWsiAuthenticationException() {
         return new WsiAuthenticationException();
+    }
+
+    /**
+     * Create an instance of {@link GetContactInfo }
+     * 
+     */
+    public GetContactInfo createGetContactInfo() {
+        return new GetContactInfo();
     }
 
     /**
