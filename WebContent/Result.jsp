@@ -1,3 +1,5 @@
+<%@page import="com.gw.searchPortal.Util.JSPUtil"%>
+<%@page import="com.example.search.AccountContactInfo"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 
@@ -11,19 +13,23 @@
 <title>Result Page</title>
 <link rel="stylesheet" type="text/css" href="Home_css/home.css">
 <script type="text/javascript">
-	function callMe(val1){
+	function callMePol(val1){
 		var c = val1;
-		/*alert("value is " + c); 
-		alert("inside callMe");*/
     document.getElementById('pol').value = c;
+    document.getElementById('formId').submit();
+	}
+	
+	function callMeCon(val2){
+		var a = val2;
+    document.getElementById('contactid').value = a;
     document.getElementById('formId').submit();
 	}
 </script>
 </head>
-<body>
+<body  style="background-image: url('Login_css/images/4.jpg');">
 
-<form id="formId" action="PolicySearchServlet" method="post">
-<div  style="background-image: url('Login_css/images/4.jpg');">
+<form id="formId" action="AccountDataSearchDeciderServlet" method="post">
+<div>
 <table width="100%">
 <tr class="topnav">
 	<td><b>Welcome   ${userName}</td>
@@ -68,7 +74,7 @@
             (ArrayList<String>)request.getAttribute("Policies"); 
              for(String s:pol){%> 
               <td width="25%" style="color:yellow">
-              <a id="linkId" href="#" onclick="javascript:callMe(<%=s%>);"><%=s%></a>
+              <a id="pollink" href="#" onclick="callMePol('<%=s%>');" style="color:#fff;"><%=s%></a>
                <input type='hidden' id= 'pol' name='pol' />
               </td> 
 			<%}%>
@@ -76,12 +82,17 @@
 
    <tr> <td width="25%" style="color:yellow"><h3><u>Contact Names</u></h3></td> </tr>
        <tr>
-             <%ArrayList<String> conName =  
+             <%ArrayList<AccountContactInfo> conList =  
+                     (ArrayList<AccountContactInfo>)request.getAttribute("ContactList");
+             ArrayList<String> conNames =  
             (ArrayList<String>)request.getAttribute("Conatact_Name"); 
-             for(String names:conName){%> 
-             <td width="25%" style="color:white"><%=names%></td> 
-
-
+             for(String name:conNames){
+             String c = JSPUtil.getContactID(conList, name);
+             System.out.println("Contact Public ID::::"+c);%> 
+             <td width="25%" style="color:white">
+             <a id="conlink" href="#" onclick="callMeCon('<%=c%>');" style="color:#fff;"><%=name%></a>
+               <input type='hidden' id= 'contactid' name='contactid' />
+             </td> 
             <%}%>
     </tr>
         <tr>

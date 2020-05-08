@@ -80,6 +80,7 @@ public class AccountSearchServlet extends HttpServlet {
 			 request.setAttribute("Address", accAdd);
 			 request.setAttribute("Policies", policylist);
 			 request.setAttribute("Conatact_Name", contactNames);
+			 request.setAttribute("ContactList", contactList);
 			 
 			String resultJSP = "/Result.jsp";
 			   RequestDispatcher dispatcher = 

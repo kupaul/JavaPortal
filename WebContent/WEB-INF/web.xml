@@ -34,6 +34,18 @@
 		<servlet-name>PolicySearchServlet</servlet-name>
 		<servlet-class>com.gw.searchPortal.Controller.PolicySearchServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description></description>
+		<display-name>ContactInfoServlet</display-name>
+		<servlet-name>ContactInfoServlet</servlet-name>
+		<servlet-class>com.gw.searchPortal.Controller.ContactInfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description></description>
+		<display-name>AccountDataSearchDeciderServlet</display-name>
+		<servlet-name>AccountDataSearchDeciderServlet</servlet-name>
+		<servlet-class>com.gw.searchPortal.Controller.AccountDataSearchDeciderServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>
 		<url-pattern>/LoginServlet</url-pattern>
@@ -53,6 +65,14 @@
 	<servlet-mapping>
 		<servlet-name>PolicySearchServlet</servlet-name>
 		<url-pattern>/PolicySearchServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ContactInfoServlet</servlet-name>
+		<url-pattern>/ContactInfoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AccountDataSearchDeciderServlet</servlet-name>
+		<url-pattern>/AccountDataSearchDeciderServlet</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
