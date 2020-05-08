@@ -2,6 +2,7 @@ package com.gw.searchPortal.Controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.ws.BindingProvider;
 
+import com.example.search.AccountContactInfo;
 import com.example.search.AccountInfo;
 import com.example.search.policysearchportalapi.PolicySearchPortalAPI;
 import com.example.search.policysearchportalapi.PolicySearchPortalAPIPortType;
@@ -55,13 +57,18 @@ public class AccountSearchServlet extends HttpServlet {
 			String accPh = accInfo.getPhoneNumber();
 			String accEmail = accInfo.getEmail();
 			ArrayList<String> policylist=(ArrayList<String>) accInfo.getPolicies().getEntry();
-			ArrayList<String> contactList=(ArrayList<String>) accInfo.getAccountContact().getEntry();
+			ArrayList<AccountContactInfo> contactList=(ArrayList<AccountContactInfo>) accInfo.getAccountContact().getEntry();
+			List<String> contactNames = new ArrayList<String>();
+			for (AccountContactInfo accountContactInfo : contactList) {
+				contactNames.add(accountContactInfo.getAccountContactName());
+			}
+			
 			String accAdd = accInfo.getAddress();
 
 			
 			logger.info("Account holder's name : " + accInfo.getAccountName());
 			logger.info("Account holder's Policies : " + accInfo.getPolicies().getEntry().toString());
-			logger.info("Account holder's contactList : " + accInfo.getAccountContact().getEntry().toString());
+			logger.info("Account holder's contactList : " + contactNames.toString());
 			
 			
 			request.setAttribute("ContactData", accInfo);
@@ -72,7 +79,7 @@ public class AccountSearchServlet extends HttpServlet {
 			 request.setAttribute("Email", accEmail);
 			 request.setAttribute("Address", accAdd);
 			 request.setAttribute("Policies", policylist);
-			 request.setAttribute("Conatact_Name", contactList);
+			 request.setAttribute("Conatact_Name", contactNames);
 			 
 			String resultJSP = "/Result.jsp";
 			   RequestDispatcher dispatcher = 

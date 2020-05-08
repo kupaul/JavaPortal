@@ -10,9 +10,19 @@
 <meta charset="ISO-8859-1">
 <title>Result Page</title>
 <link rel="stylesheet" type="text/css" href="Home_css/home.css">
+<script type="text/javascript">
+	function callMe(val1){
+		var c = val1;
+		/*alert("value is " + c); 
+		alert("inside callMe");*/
+    document.getElementById('pol').value = c;
+    document.getElementById('formId').submit();
+	}
+</script>
 </head>
 <body>
-<form >
+
+<form id="formId" action="PolicySearchServlet" method="post">
 <div  style="background-image: url('Login_css/images/4.jpg');">
 <table width="100%">
 <tr class="topnav">
@@ -52,16 +62,19 @@
      <td width="25%" style="color:white">${Address}</td>
     </tr>
     
-    <tr> <td width="25%" style="color:white"><h3><u>Policies</u></h3></td> </tr>
+    <tr> <td width="25%" style="color:yellow"><h3><u>Policies</u></h3></td> </tr>
         <tr>
              <%ArrayList<String> pol =  
             (ArrayList<String>)request.getAttribute("Policies"); 
              for(String s:pol){%> 
-              <td width="25%" style="color:white"><%=s%></td> 
+              <td width="25%" style="color:yellow">
+              <a id="linkId" href="#" onclick="javascript:callMe(<%=s%>);"><%=s%></a>
+               <input type='hidden' id= 'pol' name='pol' />
+              </td> 
 			<%}%>
     </tr>
 
-   <tr> <td width="25%" style="color:white"><h3><u>Contact Names</u></h3></td> </tr>
+   <tr> <td width="25%" style="color:yellow"><h3><u>Contact Names</u></h3></td> </tr>
        <tr>
              <%ArrayList<String> conName =  
             (ArrayList<String>)request.getAttribute("Conatact_Name"); 
@@ -80,7 +93,8 @@
    
    
  	
- 
-
+</table>
+</div>
+</form>
 </body>
 </html>

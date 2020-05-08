@@ -27,11 +27,11 @@ function searchCheck() {
 }
 </script>
 </head>
-<body>
+<body style="background-image: url('Login_css/images/4.jpg');">
 
 
 <form action="GWSearchAPIServlet" method="post">
-<div  style="background-image: url('Login_css/images/4.jpg');">
+<div>
 <table width="100%">
 <tr class="topnav">
 	<td><b>Welcome   ${userName}</td>
@@ -65,7 +65,7 @@ function searchCheck() {
                  </div>
                  </td> 
                 </tr>
-                <tr>
+         <!--        <tr>
                    
                     <td style="color:white"><input type="radio" onclick="javascript:searchCheck();" name="searchBy" 
                     id="bothCheck" value="policyAndaccountNumber">
@@ -77,7 +77,7 @@ function searchCheck() {
                          <input type="text" id='pol2' name='pol2' > 
                 
                  </div>
-				</tr>
+				</tr> --> 
 				
 				 <tr>
                     <td><button class="favorite styled" type="submit" value="submit">submit
