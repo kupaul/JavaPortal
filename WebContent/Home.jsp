@@ -65,19 +65,6 @@ function searchCheck() {
                  </div>
                  </td> 
                 </tr>
-         <!--        <tr>
-                   
-                    <td style="color:white"><input type="radio" onclick="javascript:searchCheck();" name="searchBy" 
-                    id="bothCheck" value="policyAndaccountNumber">
-					    Search by Account & Policy Number</td></tr>
-					    
-                    <tr> <td style="color:white" align="center"><div id="ifBoth" style="visibility:hidden">Please Enter Account No.
-                         <input type="text" id='acc2' name='acc2' > 
-                         <br> Please Enter Policy No.
-                         <input type="text" id='pol2' name='pol2' > 
-                
-                 </div>
-				</tr> --> 
 				
 				 <tr>
                     <td><button class="favorite styled" type="submit" value="submit">submit

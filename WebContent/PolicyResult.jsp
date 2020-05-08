@@ -56,7 +56,8 @@
     
     <tr>
      <td width="25%" style="color:white"><b>Account No:</b>  </td>
-    <td width="25%" style="color:white"><a id="linkId" href="#" onclick="javascript:callMe(${AccNumber});">${AccNumber}</a>
+    <td width="25%" style="color:white"><a id="linkId" href="#" 
+    onclick="javascript:callMe(${AccNumber});" style="color:#fff;">${AccNumber}</a>
      <input type='hidden' id= 'acc' name='acc' />
     </td>
     </tr>
