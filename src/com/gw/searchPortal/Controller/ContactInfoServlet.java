@@ -58,6 +58,9 @@ public static final long serialVersionUID = 1L;
 			   String license = conInfo.getLicense();
 			   String licenseState = conInfo.getLicenseState();
 			   String ssn = conInfo.getSSNOfficialID();
+			   String homePhone = conInfo.getHomePhone();
+			   String workPhone = conInfo.getWorkPhone();
+			   String mobilePhone = conInfo.getMobilePhone();
 			   
 			     request.setAttribute("ContactData", conInfo);
 				 request.setAttribute("first_name", firstName);
@@ -70,6 +73,9 @@ public static final long serialVersionUID = 1L;
 				 request.setAttribute("license", license);
 				 request.setAttribute("license_state", licenseState);
 				 request.setAttribute("ssn", ssn);
+				 request.setAttribute("home_no", homePhone);
+				 request.setAttribute("work_no", workPhone);
+				 request.setAttribute("mobile_no", mobilePhone);
 				 
 				 String resultJSP = "/ContactInfo.jsp";
 				   RequestDispatcher dispatcher = 

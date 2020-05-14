@@ -35,6 +35,7 @@ public class PolicySearchServlet extends HttpServlet {
 		 
 		try {
 			String polNo = request.getParameter("pol");
+			//String contactId = request.getParameter("contactid");
 		 
 		 	PolicySearchPortalAPI api = new PolicySearchPortalAPI();
 			PolicySearchPortalAPIPortType port = api.getPolicySearchPortalAPISoap11Port();
@@ -61,6 +62,7 @@ public class PolicySearchServlet extends HttpServlet {
 			 String polAccName = polInfo.getAccountName();
 			 String polAddress = polInfo.getAddress();
 			 String addressType = polInfo.getAddressType();
+			 String pNIPublicId = polInfo.getPNIPublicID();
 			 
 			    logger.info("Account holder's name : " + polInfo.getAccountName());
 				logger.info("Policy Number : " + polInfo.getPolicyNumber());
@@ -81,6 +83,7 @@ public class PolicySearchServlet extends HttpServlet {
 			 request.setAttribute("AccName", polAccName);
 			 request.setAttribute("AccAddress", polAddress);
 			 request.setAttribute("AddressType", addressType);
+			 request.setAttribute("pni_ID", pNIPublicId);
 			 
 			 logger.info("After setting request");
 			 

@@ -1,3 +1,6 @@
+<%@page import="com.example.search.PolicyInfo"%>
+<%@page import="com.gw.searchPortal.Util.JSPUtil"%>
+<%@page import="com.example.search.AccountContactInfo"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -14,10 +17,16 @@
     document.getElementById('acc').value = c;
     document.getElementById('formId').submit();
 	}
+	
+	function callMeCon(val2){
+		var a = val2;
+    document.getElementById('contactid').value = a;
+    document.getElementById('formId').submit();
+	}
 </script>
 </head>
 <body>
-<form  id="formId" action="AccountSearchServlet" method="post">
+<form  id="formId" action="AccountDataSearchDeciderServlet" method="post">
 <div  style="background-image: url('Login_css/images/4.jpg');">
 <table width="100%">
 <tr class="topnav">
@@ -82,8 +91,14 @@
     </tr>
     <tr> <td style="color:#FF7A00" style=><h3><u>Primary Named Insured</u></h3></td> </tr>
      <tr>
-     <td width="25%" style="color:white"><b>Name:</b></td>
-     <td width="25%" style="color:white">${pni_name}</td>
+     
+     <%String contactID = (String)request.getAttribute("pni_ID");
+     String conName = (String)request.getAttribute("pni_name");
+     System.out.println("Contact Public ID::::"+contactID);%>
+     <td width="25%" style="color:white">
+     <a id="conlink" href="#" onclick="callMeCon('<%=contactID%>');" style="color:#fff;"><%=conName%></a>
+     <input type='hidden' id= 'contactid' name='contactid' />
+     </td>
     </tr>
         <tr>
                     <td><button class="favorite styled" formaction="Home.jsp"> GO BACK </button></td>

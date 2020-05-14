@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="IssueDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Issued" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Offering" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="PNIPublicID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="PolicyNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="PrimaryNamedInsured" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Product" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -46,6 +47,7 @@ import javax.xml.bind.annotation.XmlType;
     "issueDate",
     "issued",
     "offering",
+    "pniPublicID",
     "policyNumber",
     "primaryNamedInsured",
     "product",
@@ -68,6 +70,8 @@ public class PolicyInfo {
     protected String issued;
     @XmlElement(name = "Offering")
     protected String offering;
+    @XmlElement(name = "PNIPublicID")
+    protected String pniPublicID;
     @XmlElement(name = "PolicyNumber")
     protected String policyNumber;
     @XmlElement(name = "PrimaryNamedInsured")
@@ -245,6 +249,30 @@ public class PolicyInfo {
      */
     public void setOffering(String value) {
         this.offering = value;
+    }
+
+    /**
+     * Gets the value of the pniPublicID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPNIPublicID() {
+        return pniPublicID;
+    }
+
+    /**
+     * Sets the value of the pniPublicID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPNIPublicID(String value) {
+        this.pniPublicID = value;
     }
 
     /**

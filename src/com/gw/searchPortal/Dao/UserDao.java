@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import com.gw.searchPortal.Bean.UserLoginBean;
 import com.gw.searchPortal.Util.DBUtil;
+import com.sun.media.jfxmedia.logging.Logger;
 
 public class UserDao {
 	
@@ -23,8 +24,11 @@ public class UserDao {
 		 
 		 try
 		 {
+			 System.out.println("Before connecting to DB");
 			 con = DBUtil.createConnection();
+			 System.out.println("After connecting to DB");
 			 String query = "insert into userInfo(username,firstName,password,lastName,email,contact) values (?,?,?,?,?,?)"; //Insert user details into the table 'USERS'
+			 System.out.println("After the Query");
 			 preparedStatement = con.prepareStatement(query); //Making use of prepared statements here to insert bunch of data
 			
 			 preparedStatement.setString(1, userName);

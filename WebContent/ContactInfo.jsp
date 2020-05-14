@@ -40,7 +40,7 @@
      <td width="25%" style="color:white">${marital_status}</td>
     </tr>
     <tr>
-     <td width="25%" style="color:white"><b>Primary Phone no.:</b></td>
+     <td width="25%" style="color:white"><b>Primary Phone Type:</b></td>
      <td width="25%" style="color:white">${ph_no}</td>
     </tr>
      <tr>

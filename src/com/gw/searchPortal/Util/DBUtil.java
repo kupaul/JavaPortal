@@ -8,9 +8,9 @@ public class DBUtil {
 	public static Connection createConnection()
 	 {
 		 Connection con = null;
-		 String url = "jdbc:mysql://localhost:3306/searchportal"; //MySQL URL followed by the database name
-		 String username = "root"; //MySQL username
-		 String password = "Manti@2020"; //MySQL password
+		 //String url = "jdbc:mysql://localhost:3306/SearchPortal"; //MySQL URL followed by the database name
+		 //String username = "root"; //MySQL username
+		 //String password = "ronaldo"; //MySQL password
 		 
 		 try 
 		 {
@@ -24,8 +24,9 @@ public class DBUtil {
 				e.printStackTrace();
 			 }
 			 
-			 con = DriverManager.getConnection(url, username, password); //attempting to connect to MySQL database
-			// System.out.println("Printing connection object "+con);
+			 //con = DriverManager.getConnection(url, username, password); //attempting to connect to MySQL database
+			 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/SearchPortal?user=root&password=ronaldo");
+			 System.out.println("Printing connection object "+con);
 		 } 
 		 catch (Exception e) 
 		 {
