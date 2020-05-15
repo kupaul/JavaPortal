@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Policy Result Page</title>
+<title>Policy Information Page</title>
 <link rel="stylesheet" type="text/css" href="Home_css/home.css">
 <script type="text/javascript">
 	function callMe(val1){
@@ -26,7 +26,7 @@
 </script>
 </head>
 <body>
-<form  id="formId" action="AccountDataSearchDeciderServlet" method="post">
+<form  id="formId" action="DataSearchDeciderServlet" method="post">
 <div  style="background-image: url('Login_css/images/4.jpg');">
 <table width="100%">
 <tr class="topnav">

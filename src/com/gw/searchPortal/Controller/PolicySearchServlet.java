@@ -87,7 +87,7 @@ public class PolicySearchServlet extends HttpServlet {
 			 
 			 logger.info("After setting request");
 			 
-			 String resultPage = "/PolicyResult.jsp";
+			 String resultPage = "/PolicyInfo.jsp";
 			  RequestDispatcher dispatcher = 
 			   getServletContext().getRequestDispatcher(resultPage);
 			  dispatcher.forward(request, response);

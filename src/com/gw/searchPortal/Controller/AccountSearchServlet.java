@@ -82,7 +82,7 @@ public class AccountSearchServlet extends HttpServlet {
 			 request.setAttribute("Conatact_Name", contactNames);
 			 request.setAttribute("ContactList", contactList);
 			 
-			String resultJSP = "/Result.jsp";
+			String resultJSP = "/AccountInfo.jsp";
 			   RequestDispatcher dispatcher = 
 					   getServletContext().getRequestDispatcher(resultJSP);
 					  dispatcher.forward(request, response);

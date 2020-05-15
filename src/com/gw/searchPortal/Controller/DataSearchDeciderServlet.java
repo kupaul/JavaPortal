@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class AccountDataSearchDeciderServlet extends HttpServlet {
+public class DataSearchDeciderServlet extends HttpServlet {
 	
 	/**
 	 * 
 	 */
 	public static final long serialVersionUID = 1L;
 	
-	public AccountDataSearchDeciderServlet() {
+	public DataSearchDeciderServlet() {
 		super();
 	}
 	
@@ -25,13 +25,15 @@ public class AccountDataSearchDeciderServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException,IOException {
 		response.setContentType("text/html");
-		logger.info("Inside AccountDataSearchDeciderServlet");
+		logger.info("Inside DataSearchDeciderServlet");
 		
 		String policyNumber = request.getParameter("pol");
 		String contactId = request.getParameter("contactid");
+		String accNumber = request.getParameter("acc");
 		
 		logger.info("Policy No is" +policyNumber );
 		 logger.info("Contact Id" +contactId );
+		 logger.info("Account number is" +accNumber );
 		
 		if(policyNumber!=null && !policyNumber.isEmpty()) {
 			logger.info("Inside if..");
@@ -40,6 +42,9 @@ public class AccountDataSearchDeciderServlet extends HttpServlet {
 		}else if(contactId!=null && !contactId.isEmpty()) {
 			logger.info("Inside else..");
 			request.getRequestDispatcher("/ContactInfoServlet").include(request, response);
+		}else if(accNumber!=null && !accNumber.isEmpty()) {
+			logger.info("Inside else..");
+			request.getRequestDispatcher("/AccountSearchServlet").include(request, response);
 		}
 		
 	}
