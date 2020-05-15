@@ -25,6 +25,7 @@ public class DBUtil {
 			 }
 			 
 			 //con = DriverManager.getConnection(url, username, password); //attempting to connect to MySQL database
+			/* concatenating the url,username and password as arguement to getconnection */
 			 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/SearchPortal?user=root&password=ronaldo");
 			 System.out.println("Printing connection object "+con);
 		 } 

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Policy Result Page</title>
+<title>Contact Information Page</title>
 <link rel="stylesheet" type="text/css" href="Home_css/home.css">
 </head>
 <body>

@@ -42,9 +42,9 @@
 	</servlet>
 	<servlet>
 		<description></description>
-		<display-name>AccountDataSearchDeciderServlet</display-name>
-		<servlet-name>AccountDataSearchDeciderServlet</servlet-name>
-		<servlet-class>com.gw.searchPortal.Controller.AccountDataSearchDeciderServlet</servlet-class>
+		<display-name>DataSearchDeciderServlet</display-name>
+		<servlet-name>DataSearchDeciderServlet</servlet-name>
+		<servlet-class>com.gw.searchPortal.Controller.DataSearchDeciderServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>
@@ -71,8 +71,8 @@
 		<url-pattern>/ContactInfoServlet</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>AccountDataSearchDeciderServlet</servlet-name>
-		<url-pattern>/AccountDataSearchDeciderServlet</url-pattern>
+		<servlet-name>DataSearchDeciderServlet</servlet-name>
+		<url-pattern>/DataSearchDeciderServlet</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Result Page</title>
+<title>Account Information Page</title>
 <link rel="stylesheet" type="text/css" href="Home_css/home.css">
 <script type="text/javascript">
 	function callMePol(val1){
@@ -28,7 +28,7 @@
 </head>
 <body  style="background-image: url('Login_css/images/4.jpg');">
 
-<form id="formId" action="AccountDataSearchDeciderServlet" method="post">
+<form id="formId" action="DataSearchDeciderServlet" method="post">
 <div>
 <table width="100%">
 <tr class="topnav">
